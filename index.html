@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambiar Imagen con Botón</title>
+</head>
+<body>
+    <!-- Imagen inicial -->
+    <img id="miImagen" src="solt_w.png" alt="Imagen en tema claro">
+
+    <!-- Botón para cambiar la imagen -->
+    <button id="theme-button" onclick="cambiarImagen()">Cambiar Tema</button>
+
+    <!-- Script para cambiar la imagen -->
+    <script>
+        // Función para cambiar la imagen
+        function cambiarImagen() {
+            var imagen = document.getElementById("miImagen");
+            // Verificar qué imagen está actualmente mostrándose
+            if (imagen.src.endsWith("solt_w.png")) {
+                imagen.src = "solt_b.png"; // Cambiar a la imagen de tema oscuro
+                imagen.alt = "Imagen en tema oscuro"; // Cambiar el texto alternativo si es necesario
+            } else {
+                imagen.src = "solt_w.png"; // Volver a la imagen de tema claro
+                imagen.alt = "Imagen en tema claro"; // Cambiar el texto alternativo si es necesario
+            }
+        }
+    </script>
+</body>
+</html>
